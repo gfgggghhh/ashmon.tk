@@ -1,0 +1,98 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+<%@ Register Src="UserControl/ShoppingUserControl.ascx" TagName="ShoppingUserControl"
+    TagPrefix="uc6" %>
+<%@ Register Src="UserControl/Tree.ascx" TagName="Tree" TagPrefix="uc3" %>
+<%@ Register Src="UserControl/Login.ascx" TagName="Login" TagPrefix="uc4" %>
+<%@ Register Src="UserControl/Menu.ascx" TagName="Menu" TagPrefix="uc1" %>
+<%@ Register Src="UserControl/Search.ascx" TagName="Search" TagPrefix="uc2" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Untitled Page</title>
+</head>
+<body style="background-image: url(Images/Banner/wallandleaves1.jpg); background-position: center top;">
+    <form id="form1" runat="server">
+    <div align="center">
+        <table border="0" cellpadding="0" cellspacing="0" style="height: 69%" width="800">
+            <tr>
+                <td colspan="2" style="height: 140px;background-image:url(Images/Banner/18710.gif)">
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="1" style="width: 200px">
+                </td>
+                <td align="right" style="width: 747px">
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 200px" rowspan="2" align="center" valign="top">
+                    <uc4:Login ID="Login1" runat="server" />
+                    &nbsp;&nbsp;
+                </td>
+                <td style="width: 747px" align="right" valign="top">
+                    <uc1:Menu ID="Menu1" runat="server" />
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 747px;" rowspan="3">
+                    &nbsp;<table style="width: 600px; height: 464px">
+                        <tr>
+                            <td colspan="3" rowspan="3" style="border-top-style: groove; border-right-style: groove;
+                                border-left-style: groove; height: 242px; border-bottom-style: groove" valign="top" align="center">
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                </asp:ContentPlaceHolder>
+                                &nbsp;</td>
+                        </tr>
+                        <tr>
+                        </tr>
+                        <tr>
+                        </tr>
+                    </table>
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td style="width: 200px; height: 115px;" valign="top" align="center">
+                    <uc2:Search ID="Search1" runat="server" />
+                    <uc6:ShoppingUserControl ID="ShoppingUserControl1" runat="server" />
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 200px; height: 263px" valign="top" align="center">
+                    &nbsp;<uc3:Tree ID="Tree1" runat="server" />
+                    <br />
+                    Support Online<br />
+                    <br />
+                    <table style="width: 200px; border-top-style: groove; border-right-style: groove; border-left-style: groove; border-bottom-style: groove;">
+                        <tr>
+                            <td style="width: 41px">
+                                <img src="Images/Banner/yahoo.png" alt ="Yahoo Messenger"/></td>
+                            <td colspan="2" style="width: 194px">
+                                <img alt="shoppingonline2812" src="http://opi.yahoo.com/online?u=shoppingonline2812&m=g&t=2&l=us" /></td>
+                        </tr>
+                        <tr>
+                            <td style="width: 41px">
+                                <img src="Images/Banner/yahoo.png" alt ="Yahoo Messenger"/></td>
+                            <td colspan="2" style="width: 194px">
+                                <img alt="onlineshopping2154" src="http://opi.yahoo.com/online?u=onlineshopping2154&m=g&t=2&l=us" /></td>
+                        </tr>
+                        <tr>
+                            <td style="width: 41px">
+                                <img src="Images/Banner/yahoo.png" alt ="Yahoo Messenger"/></td>
+                            <td colspan="2" style="width: 194px">
+                                <img alt="onlineshopping2050" src="http://opi.yahoo.com/online?u=onlineshopping2050&m=g&t=2&l=us" /></td>
+                        </tr>
+                    </table>
+                    <br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="height: 22px">
+                    &nbsp;</td>
+            </tr>
+        </table>
+        &nbsp;</div>
+    </form>
+</body>
+</html>
